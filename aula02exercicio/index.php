@@ -8,7 +8,7 @@
 </head>
 <body>
     <?php
-        require_once 'Carrro.php';
+        require_once 'Carro.php';
 
         $c1 = new carro;
         $c1->cor = "Azul";
