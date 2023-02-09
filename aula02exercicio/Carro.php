@@ -15,10 +15,11 @@ class carro{
         $this->veloc = $vel;
 
         if($this->veloc > $this->velocMax){
-            echo "<p> O carrro " . $this->cor ." ACIMA da velocidade máxima permitida (" . $this->velocMax . ") ";
-            echo "é passível de multa! </p>";
+            echo "<p> O carrro " . $this->cor ." está ACIMA da velocidade máxima permitida (" . $this->velocMax . ")";
+            echo ", <strong>CORRE O RISCO</strong> de ser multado pois está a " . $this->veloc . "Km/h </p>";
         } else{
             echo "<p> O carro " . $this->cor . " está DENTRO da velocidade máxima permitida (" . $this->velocMax .")";
+            echo ", está a " . $this->veloc ."Km/h </p>";
         }
     }
 

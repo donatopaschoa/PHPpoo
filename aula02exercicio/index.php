@@ -14,8 +14,12 @@
         $c1->cor = "Azul";
         $c1->velocMax = 120;
         $c1->veloc = 50;
-
         $c1->acelerar(200);
+
+        $c2 = new carro;
+        $c2->cor = "Vermelho";
+        $c2->velocMax = 120;
+        $c2->acelerar(50);
     ?>
 
 </body>
