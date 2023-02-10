@@ -19,7 +19,7 @@
         $c2 = new carro;
         $c2->cor = "Vermelho";
         $c2->velocMax = 120;
-        $c2->acelerar(50);
+        $c2->parar();
     ?>
 
 </body>
