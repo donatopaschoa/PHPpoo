@@ -1,0 +1,1 @@
+Pular para a próxima pasta "aula4" pois o conteúdo da pasta "aula3" deveria estar destinado para os exercícios das pastas "aula02exercicio1" e "aula02exercicio2"
