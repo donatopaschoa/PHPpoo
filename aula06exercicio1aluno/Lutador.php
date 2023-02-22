@@ -38,18 +38,21 @@
         // Métodos específicos: ---------
 
         public function apresentar(){ // É anunciado pelo apresentador dentro do ring ao microfone
-            echo "<br>Lutador: {$this->getNome()}<br>";
-            echo "Origem: {$this->getNacionalidade()} <br>";
-            echo "{$this->idade} anos<br>";
-            echo "{$this->getAltura()} m de altura<br>";
-            echo "Pesando {$this->getPeso()} Kg<br>";
-            echo "Ganhou {$this->getVitorias()}<br>";
-            echo "Perdeu {$this->getDerrotas()}<br>";
-            echo "Empatou {$this->getEmpates()}<br>";
+            echo "<p>-----------------------------------------------------------------</p>";
+            echo "<p>CHEGOU A HORA! O lutador </p>{$this->getNome()} ";
+            echo "veio diretamente de {$this->getNacionalidade()}, tem ";
+            echo "{$this->idade} anos e pesa ";
+            echo "{$this->getPeso()} Kg<br>";
+            echo "Com {$this->getAltura()} m de altura ele tem ";
+           
+            echo "{$this->getVitorias()} vitórias, ";
+            echo "{$this->getDerrotas()} derrotas e ";
+            echo "{$this->getEmpates()} empates<br>";
         }
 
         public function status(){ // Barra que mostra no rodapé do vídeo
-            echo "<br>{$this->getNome()} é um peso {$this->getCategoria()}, {$this->getVitorias()} vitórias, {$this->getDerrotas()} derrotas, {$this->getEmpates()} empates<br>";
+            echo "<p>-----------------------------------------------------------------</p>";
+            echo "{$this->getNome()} é um peso {$this->getCategoria()} e já ganhou {$this->getVitorias()} vezes , {$this->getDerrotas()} derrotas e teve {$this->getEmpates()} empates<br>";
         }
         
         public function ganharLuta(){
@@ -64,7 +67,7 @@
             $this->setEmpates($this->getEmpates() + 1);
         }
 
-        // Métodos especiais: ---------
+        // Métodos especiais: acessores e modificadores ---------
 
         public function __construct(
                             $nome,
@@ -80,13 +83,10 @@
             $this->nacionalidade = $nac;
             $this->idade = $id;
             $this->altura = $alt;
-            $this->peso = $peso;
+            $this->setPeso($peso); // Atualzando o atributo "categoria" ao chamar "setPeso()":
             $this->vitorias = $vit;
             $this->derrotas = $der;
             $this->empates = $emp;
-
-            // Atualzando o atributo "categoria" ao chamar "setPeso()":
-            $this->setPeso($peso);
         }
 
         private function getNome(){
