@@ -10,7 +10,7 @@
     <pre>
         <div>
             <?php
-                require_once 'Lutador.php';
+                //require_once 'Lutador.php'; // >> não precisa pois foi importada na classe Luta.php
                 require_once 'Luta.php';
 
                 echo "<p><h2>Luta:</h2></p>";
