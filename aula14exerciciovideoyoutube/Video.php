@@ -57,10 +57,16 @@
         }
 
         function setAvaliacao($avaliacao){
-            // A avaliação deve ser ponderada de acordo com a qtde de 
+            // A avaliação deve ser de acordo com a qtde de 
             // views do vídeo assistido, portanto:
-            $media = ($this->avaliacao + $avaliacao) / $this->views;
-            $this->avaliacao = $media;
+            if($this->views > 2){
+                $total = ($this->avaliacao * ($this->views -1)); // Total de avaliação antes de uma nova visualização
+                $media = ($total + $avaliacao) / $this->views; // Média linear igualitária
+                $this->avaliacao = $media;
+            }else{ // Até 2 visualizações, o comportamento é linear:
+                $media = ($this->avaliacao + $avaliacao) / $this->views; 
+                $this->avaliacao = $media;
+            }
         }
 
         function setViews($views){
